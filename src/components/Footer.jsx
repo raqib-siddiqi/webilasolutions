@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom'
 
-export default function Footer() {
+export default function Footer({ theme }) {
   return (
     <footer className="footer">
       <div className="container footer-grid">
         <div>
-          <img className="footer-logo" src="/images/logo/webila-teal.png" alt="Webila Solutions" />
+          <img className="footer-logo" src={theme === 'light' ? '/images/logo/webila-teal.png' : '/images/logo/webila-dark.png'} alt="Webila Solutions" />
           <p className="footer-copy">
             Digital experiences built with design thinking, clean development, and technology that works for your business.
           </p>

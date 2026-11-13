@@ -12,7 +12,7 @@ export default function Navbar({ theme, onToggleTheme }) {
     <header className="nav-wrap">
       <nav className="nav container">
         <Link to="/" className="brand" aria-label="Webila Solutions home">
-          <img src="/images/logo/webila-dark.png" alt="Webila Solutions" />
+          <img src={theme === 'light' ? '/images/logo/webila-teal.png' : '/images/logo/webila-dark.png'} alt="Webila Solutions" />
         </Link>
 
         <div className="nav-links">

@@ -11,11 +11,13 @@ import NotFound from './pages/NotFound'
 export default function App() {
   const [theme, setTheme] = useState(() => {
     const savedTheme = localStorage.getItem('webila-theme')
-    return savedTheme === 'light' ? 'light' : 'dark'
+    return savedTheme === 'dark' ? 'dark' : 'light'
   })
 
   useEffect(() => {
     localStorage.setItem('webila-theme', theme)
+    const themeColor = document.querySelector('meta[name="theme-color"]')
+    if (themeColor) themeColor.content = theme === 'light' ? '#ffffff' : '#0b0d12'
   }, [theme])
 
   function toggleTheme() {
@@ -34,7 +36,7 @@ export default function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
-      <Footer />
+      <Footer theme={theme} />
     </div>
   )
 }

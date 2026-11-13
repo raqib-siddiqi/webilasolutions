@@ -28,15 +28,15 @@ export default function Portfolio() {
           {projects.map((project, i) => {
             const cardContent = (
               <>
-                <div className="portfolio-img"><img src={`/images/portfolio/${project.slug}.webp`} alt={`${project.title} — ${project.category} project preview`} loading="lazy" decoding="async" /><span className="portfolio-index">{String(i + 1).padStart(2, '0')}</span>{project.url && <span className="visit">Visit site ↗</span>}</div>
+                <div className="portfolio-img"><img src={`/images/portfolio/${project.slug}.webp`} alt={`${project.title} — ${project.category} project preview`} loading={i === 0 ? 'eager' : 'lazy'} decoding="async" /><span className="portfolio-index">{String(i + 1).padStart(2, '0')}</span>{project.url && <span className="visit">Visit site ↗</span>}</div>
                 <div className="portfolio-info"><div><p>{project.category}</p><h2>{project.title}</h2><p className="portfolio-description">{project.description}</p>{project.details && <p className="portfolio-details">{project.details}</p>}</div><span>{project.technologies}</span></div>
               </>
             )
 
             return project.url ? (
-              <a className={`portfolio-card ${i === 0 || i === 3 ? 'large' : ''}`} href={project.url} target="_blank" rel="noreferrer" key={project.slug}>{cardContent}</a>
+              <a className={`portfolio-card ${i === 0 ? 'large' : ''}`} href={project.url} target="_blank" rel="noreferrer" key={project.slug}>{cardContent}</a>
             ) : (
-              <article className={`portfolio-card ${i === 0 || i === 3 ? 'large' : ''}`} key={project.slug}>{cardContent}</article>
+              <article className={`portfolio-card ${i === 0 ? 'large' : ''}`} key={project.slug}>{cardContent}</article>
             )
           })}
         </div>
