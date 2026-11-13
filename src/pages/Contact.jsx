@@ -54,7 +54,7 @@ export default function Contact() {
         <div className="container narrow">
           <p className="eyebrow">Contact</p>
           <h1>Have something in <span>mind?</span></h1>
-          <p>Tell us what you're trying to build. This starter form is frontend-only and can be connected to your preferred backend or email service.</p>
+          <p>Share a few details about your project and we’ll be in touch by email.</p>
         </div>
       </section>
 

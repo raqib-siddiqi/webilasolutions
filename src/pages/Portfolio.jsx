@@ -28,7 +28,7 @@ export default function Portfolio() {
           {projects.map((project, i) => {
             const cardContent = (
               <>
-                <div className="portfolio-img"><img src={`/images/portfolio/${project.slug}.webp`} alt={`${project.title} — ${project.category} project preview`} /><span className="portfolio-index">{String(i + 1).padStart(2, '0')}</span>{project.url && <span className="visit">Visit site ↗</span>}</div>
+                <div className="portfolio-img"><img src={`/images/portfolio/${project.slug}.webp`} alt={`${project.title} — ${project.category} project preview`} loading="lazy" decoding="async" /><span className="portfolio-index">{String(i + 1).padStart(2, '0')}</span>{project.url && <span className="visit">Visit site ↗</span>}</div>
                 <div className="portfolio-info"><div><p>{project.category}</p><h2>{project.title}</h2><p className="portfolio-description">{project.description}</p>{project.details && <p className="portfolio-details">{project.details}</p>}</div><span>{project.technologies}</span></div>
               </>
             )
