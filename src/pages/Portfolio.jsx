@@ -18,8 +18,8 @@ export default function Portfolio() {
     <>
       <section className="page-hero section">
         <div className="container">
-          <p className="eyebrow">Portfolio</p>
-          <div className="portfolio-heading"><h1>Work made to <span>move.</span></h1><p>A selection of digital experiences and websites built for real businesses and practical workflows.</p></div>
+          <p className="eyebrow">Selected work / Webila Solutions</p>
+          <div className="portfolio-heading"><h1>Digital work,<br /><span>built with purpose.</span></h1><p>Real websites, platforms and applications developed for businesses and practical workflows.</p></div>
         </div>
       </section>
 

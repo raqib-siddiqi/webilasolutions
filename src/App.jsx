@@ -17,7 +17,7 @@ export default function App() {
   useEffect(() => {
     localStorage.setItem('webila-theme', theme)
     const themeColor = document.querySelector('meta[name="theme-color"]')
-    if (themeColor) themeColor.content = theme === 'light' ? '#ffffff' : '#0b0d12'
+    if (themeColor) themeColor.content = theme === 'light' ? '#ffffff' : '#071629'
   }, [theme])
 
   function toggleTheme() {
